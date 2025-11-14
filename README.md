@@ -1,7 +1,7 @@
 # asymReconstruct
 The asymReconstruct is a workflow first introduced in [Asymmetric gating of a homopentameric ion channel GLIC revealed by cryo-EM](https://www.pnas.org/doi/10.1073/pnas.2512811122#executive-summary-abstract), reported by Li et al., where it was successfully used to decipher the asymmetric conformational changes during the activation of a homopentameric proton-gated ion channel GLIC.    
   
-The workflow is primarily based on cryo-EM data processing of single particles with cyclic pseudosymmetry, using the prevalent [RELION](https://github.com/3dem/relion) and [cryoSPARC](https://cryosparc.com/), with two stand-alone shell scripts to perform key steps, namely ```configurations_stats.sh``` and ```align.sh```.
+The workflow is primarily based on cryo-EM data processing of single particles with cyclic pseudosymmetry, using the [RELION](https://github.com/3dem/relion) software,  with two stand-alone shell scripts to perform key steps, namely ```configurations_stats.sh``` and ```align.sh```.
 
 A general demonstration of asymReconstruct workflow is described below using publicly available data.
 
@@ -64,7 +64,7 @@ $${\color{red}251k\\_particles.cor.star}$$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Additional arguments:** *--skip_align*  
 
   
-Alternatively, this part can be done in cryoSPARC. 
+Alternatively, this part can be done in [cryoSPARC](https://cryosparc.com/). 
 ### 2. 3D classification focused on single subunit in RELION
 To perform focused 3D classification in RELION, the following files are required:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -165,7 +165,7 @@ For refinement with local angular search, specify:
 
 Note that the value for angular search range should be tested for a new project to ensure that there is no significant divergence of rotational angles after the refinement. For a pentameric protein, the change in *_rlnAngleRot* for each particle should be less than ±72 degrees.
 
-To speed up the process, cryoSPARC can be used. In cryoSPARC, simple reconstruction can be achieved by “Reconstruct Only” job as described above. And a refinement with local angular search can be performed further using the “Local Refinement” job. Users are advised to randomly split data into even halves for validation and resolution estimation.
+To speed up the process, [cryoSPARC](https://cryosparc.com/) can be used. In cryoSPARC, simple reconstruction can be achieved by “Reconstruct Only” job as described above. And a refinement with local angular search can be performed further using the “Local Refinement” job. Users are advised to randomly split data into even halves for validation and resolution estimation.
 
 Using cryoSPARC’s reconstruction, we have reconstructed seven conformations from the original 251k particles, with resolutions ranging from 2.96 to 3.66 Å (figure below).
 
