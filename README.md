@@ -1,5 +1,5 @@
 # asymReconstruct
-The asymReconstruct is a workflow first introduced in [Asymmetric gating of a homopentameric ion channel GLIC revealed by cryo-EM](https://www.pnas.org/doi/10.1073/pnas.2512811122#executive-summary-abstract), reported by Li et al., where it was successfully used to decipher the asymmetric conformational changes during the activation of a homopentameric proton-gated ion channel GLIC.    
+The asymReconstruct is a workflow first introduced in [Asymmetric gating of a homopentameric ion channel GLIC revealed by cryo-EM](https://www.pnas.org/doi/10.1073/pnas.2512811122), reported by Li et al., where it was successfully used to decipher the asymmetric conformational changes during the activation of a homopentameric proton-gated ion channel GLIC.    
   
 The workflow is primarily based on cryo-EM data processing of single particles with cyclic pseudosymmetry, using the [RELION](https://github.com/3dem/relion) software,  with two stand-alone shell scripts to perform key steps, namely ```configurations_stats.sh``` and ```align.sh```.
 
